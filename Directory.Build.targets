@@ -1,0 +1,11 @@
+<!--
+This file is applied *after* individual `.csproj` settings, which makes it suitable for specifying final configurations or build tasks that should be applied across projects.
+
+Typically, you would place build tasks (e.g., custom post-build actions) here.
+-->
+
+<Project>
+  <Target Name="AfterBuild" AfterTargets="Build">
+    <Message Text="Build completed for '$(MSBuildProjectName)' in '$(Configuration)' configuration with RID '$(RuntimeIdentifier)'" Importance="high" />
+  </Target>
+</Project>

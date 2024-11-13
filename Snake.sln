@@ -1,0 +1,28 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj", "{3330A098-3E83-48BA-8DE9-21708C3D2389}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.Tests", "Snake.Tests\Snake.Tests.csproj", "{8AD08D33-9449-450D-8DB0-F4A6B7B01300}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3330A098-3E83-48BA-8DE9-21708C3D2389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3330A098-3E83-48BA-8DE9-21708C3D2389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3330A098-3E83-48BA-8DE9-21708C3D2389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3330A098-3E83-48BA-8DE9-21708C3D2389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD08D33-9449-450D-8DB0-F4A6B7B01300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD08D33-9449-450D-8DB0-F4A6B7B01300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD08D33-9449-450D-8DB0-F4A6B7B01300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD08D33-9449-450D-8DB0-F4A6B7B01300}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
