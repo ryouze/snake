@@ -1,0 +1,46 @@
+<!--
+This file is applied *before* individual `.csproj` settings, making it ideal for defining default properties.
+
+If you place configuration settings here, each project will inherit these defaults unless explicitly overridden within the individual project file.
+
+Typically, you would place default settings (e.g., .NET version) and common property values here. By placing them here, you ensure that all projects use these defaults without needing to specify them in each `.csproj`.
+-->
+
+<Project>
+
+  <!-- Framework -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <!-- Disable implicit features -->
+  <PropertyGroup>
+    <ImplicitUsings>false</ImplicitUsings>
+    <DisableImplicitNamespaceImports>true</DisableImplicitNamespaceImports>
+  </PropertyGroup>
+
+  <!-- Language -->
+  <PropertyGroup>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
+    <!-- <InvariantGlobalization>true</InvariantGlobalization> Invariant culture, reduces filesize, but breaks localization -->
+    <!-- Reference: https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md -->
+  </PropertyGroup>
+
+  <!-- Publish -->
+  <PropertyGroup>
+    <PublishDir>$(SolutionDir)publish</PublishDir>      <!-- Explicitly set the publish directory to "root/publish" -->
+    <PublishSingleFile>true</PublishSingleFile>         <!-- Publish as a single binary -->
+    <PublishSelfContained>false</PublishSelfContained>  <!-- Do not include the .NET runtime -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>  <!-- Do not append the "net8.0" to the output path -->
+    <PublishRelease>true</PublishRelease>               <!-- Publish the Release configuration (defaults to "true" since .NET 8.0) -->
+  </PropertyGroup>
+
+  <!-- Do not include debug symbols for Release builds -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>None</DebugType>
+  </PropertyGroup>
+
+</Project>

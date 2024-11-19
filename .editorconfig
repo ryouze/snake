@@ -1,0 +1,5 @@
+[*.cs]
+# Disable "Remove unnecessary 'this' qualifier". I will always explicitly use 'this'.
+dotnet_diagnostic.IDE0003.severity = none
+# Disable "Use primary constructor". This is unreadable.
+dotnet_diagnostic.IDE0290.severity = none

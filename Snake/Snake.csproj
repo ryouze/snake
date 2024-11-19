@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>snake</AssemblyName>  <!-- Explicitly set the binary name to lowercased "snake" -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Spectre.Console: https://spectreconsole.net/ -->
+    <PackageReference Include="Spectre.Console" Version="0.49.*" />
+  </ItemGroup>
+
+</Project>
